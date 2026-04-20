@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albert Style | C-State Logger Pro</title>
+    <style>
+        :root {
+            --primary: #00d4ff; /* 科技藍 */
+            --bg: #0a0f1e;      /* 深邃黑藍 */
+            --surface: #161b22; /* 區塊背景 */
+            --text: #c9d1d9;    /* 標準文字色 */
+            --highlight: #58a6ff;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Consolas', 'Microsoft JhengHei', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* Albert Style 模擬腳本標頭 */
+        .script-header {
+            background: #0d1117;
+            border: 1px solid var(--border);
+            padding: 20px;
+            font-family: 'Consolas', monospace;
+            color: #8b949e;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            white-space: pre-wrap;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3 { color: var(--highlight); }
+
+        .badge {
+            background: var(--primary);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        /* 產品展示區 */
+        .hero-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            margin: 20px 0;
+        }
+
+        /* 5W2H / 特色區塊 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 24px;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
+
+        /* 版本紀錄表 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th { color: var(--primary); background: rgba(0,212,255,0.05); }
+
+        /* 按鈕設計 */
+        .btn-group { text-align: center; margin-top: 50px; }
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 10px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--primary); color: #000; }
+        .btn-primary { background: var(--primary); color: #000; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            font-size: 0.8em;
+            color: #6e7681;
+            border-top: 1px solid var(--border);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="script-header">
+# ================================================================
+#  Project Name : C-State Logger Pro
+#  Standard     : Albert Zhou Style Engineering
+#  Framework    : 5W2H / RCA Integration
+#  Purpose      : Automated CPU Power Management Testing
+# ================================================================</div>
+
+    <section>
+        <h1>C-State Logger Pro <span class="badge">v1.1.3</span></h1>
+        <p>這不只是一個腳本，而是一套完整的 SIT/QA 自動化驗證解決方案。針對 RHEL 與 SLE 環境優化，確保每一份測試數據都具備高度的一致性與追蹤力。</p>
+        
+        <img src="screenshot.png" alt="Albert Style UI" class="hero-img">
+    </section>
+
+    <div class="grid">
+        <div class="card">
+            <h3>📂 嚴謹的日誌架構</h3>
+            <p>遵循 Albert Style 分類標準，自動根據 OS 版本與時間戳記建立目錄，確保數據「好讀、好找、好分析」。</p>
+        </div>
+        <div class="card">
+            <h3>📊 5W2H 報表邏輯</h3>
+            <p>內建專業 HTML 報表生成器，每一份報告都包含完整的測試上下文，直接滿足大廠驗證交付需求。</p>
+        </div>
+        <div class="card">
+            <h3>🛠 跨平台自動化</h3>
+            <p>完美整合 Zenity GUI 與 TUI，在沒有顯示環境的伺服器端也能穩定執行自動化採樣流程。</p>
+        </div>
+    </div>
+
+    <section>
+        <h2>版本變更紀錄 (Change Log)</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>版本</th>
+                    <th>日期</th>
+                    <th>更新內容</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>v1.1.3</td>
+                    <td>2025-10-16</td>
+                    <td>全面優化中文介面，提升在 SLE 15 環境下的 GUI 穩定性。</td>
+                </tr>
+                <tr>
+                    <td>v1.0.0</td>
+                    <td>2025-10-02</td>
+                    <td>初始版本發布，整合預設測試情境 (1H/12H)。</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="btn-group">
+        <a href="README_cstate_logger_v1.0.0.pdf" class="btn" target="_blank">📄 技術說明書 (PDF)</a>
+        <a href="cstate_logger_gui.sh" class="btn btn-primary">📥 下載工具套件 (.sh / .py)</a>
+    </div>
+
+    <footer>
+        Designed by <strong>Albert Zhou</strong> | Engineering Excellence with AI Collaboration<br>
+        2026 Professional Automation Series
+    </footer>
+</div>
+
+</body>
+</html>
